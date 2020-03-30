@@ -1,5 +1,4 @@
 # Criação de um novo projeto e Anotações importantes
-
 * Criar pasta do projeto
 * dentro da pasta, rodar o comando: **npm init -y**
 * instalar o framework express com o comando: **npm install express**
