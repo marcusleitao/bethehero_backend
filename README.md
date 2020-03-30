@@ -1,26 +1,26 @@
-# InstalaÁ„o do Projeto e AnotaÁıes importantes
+# Cria√ß√£o de um novo projeto e Anota√ß√µes importantes
 
 * Criar pasta do projeto
 * dentro da pasta, rodar o comando: **npm init -y**
 * instalar o framework express com o comando: **npm install express**
 * criar arquivo **index.js** na raiz do projeto
-* para comeÁar a desenvolver, vamos importar o express para dentro do arquivo: ex: **const express = require(?express?);**
-* criar uma vari·vel que vai armazenar a aplicaÁ„o, instanciando a express ex: **const app = express();**
-* agora precisamos mandar a aplicaÁ„o ouvir a porta **3333 ex: app.listen(3333);**
+* para come√ßar a desenvolver, vamos importar o express para dentro do arquivo: ex: **const express = require(?express?);**
+* criar uma vari√°vel que vai armazenar a aplica√ß√£o, instanciando a express ex: **const app = express();**
+* agora precisamos mandar a aplica√ß√£o ouvir a porta **3333 ex: app.listen(3333);**
 * para ver o resultado no navegador, rode o comando: node index.js e depois acesse o **localhost:3333**
-* Para facilitar o processo de desenvolvimento, È interessante instalar o nodemon para que n„o seja necess·rio reiniciar o servidor toda vez que fizer alguma alteraÁ„o no arquivo raiz da aplicaÁ„o, para isso, na pasta do projeto rode o comando: **npm install nodemon -D**
-* feito isso, È necess·rio o arquivo **package.json** que estar· na raiz do projeto, alterar  a linha que estar· escrito: **"test": "echo \"Error: no test specified\" && exit 1"** por **"start": "nodemon index.js"** ou simplesmente adicionar esta linha nova abaixo do comando j· existente 
-* feito isso È sÛ rodar o comando npm start e toda alteraÁ„o que for feita, ser· carregada automaticamente rodando o comando **npm start**
+* Para facilitar o processo de desenvolvimento, √© interessante instalar o nodemon para que n√£o seja necess√°rio reiniciar o servidor toda vez que fizer alguma altera√ß√£o no arquivo raiz da aplica√ß√£o, para isso, na pasta do projeto rode o comando: **npm install nodemon -D**
+* feito isso, √© necess√°rio o arquivo **package.json** que estar√° na raiz do projeto, alterar  a linha que estar√° escrito: **"test": "echo \"Error: no test specified\" && exit 1"** por **"start": "nodemon index.js"** ou simplesmente adicionar esta linha nova abaixo do comando j√° existente 
+* feito isso √© s√≥ rodar o comando npm start e toda altera√ß√£o que for feita, ser√° carregada automaticamente rodando o comando **npm start**
 
 # Conectando ao Banco de Dados (SQlite)
-* Para conectar com o banco de dados, primeiro È necess·rio instalar a biblioteca **knexjs**, disponÌvel em http://knexjs.org/, siga o passo-a-passo de instalaÁ„o dentro da raiz do projeto
-* apÛs a instalaÁ„o, se for fazer o uso do sqlite crie uma pasta dentro do **src** ou **raiz** do projeto chamada **database**, onde ficar· armazenado o arquivo de configuraÁ„o do banco de dados
-* feito isso, v· ao arquivo **knexfile.js**, localize a linha onde fica o **development** e coloque o caminho do arquivo que vocÍ criar· para configurar a base, ex:
+* Para conectar com o banco de dados, primeiro √© necess√°rio instalar a biblioteca **knexjs**, dispon√≠vel em http://knexjs.org/, siga o passo-a-passo de instala√ß√£o dentro da raiz do projeto
+* ap√≥s a instala√ß√£o, se for fazer o uso do sqlite crie uma pasta dentro do **src** ou **raiz** do projeto chamada **database**, onde ficar√° armazenado o arquivo de configura√ß√£o do banco de dados
+* feito isso, v√° ao arquivo **knexfile.js**, localize a linha onde fica o **development** e coloque o caminho do arquivo que voc√™ criar√° para configurar a base, ex:
 **filename: ?./src/database/db.sqlite?**
 * dentro da pasta database crie uma pasta chamada migrations
-* dentro do aquivo **knexfile.js**, adicione a localizaÁ„o da sua pasta **migrations**
+* dentro do aquivo **knexfile.js**, adicione a localiza√ß√£o da sua pasta **migrations**
 * abaixo do objeto **migrations**, adicione a linha **useNullAsDefault: true,**
-* apÛs isso, para criar as tabelas dentro do sqlite, rode o seguinte comando:  **npx knex migrate:make create_nomedatabela**
-ao rodar o comando acima, note que ele criar· um arquivo dentro de onde vc prÈ-determinou 
+* ap√≥s isso, para criar as tabelas dentro do sqlite, rode o seguinte comando:  **npx knex migrate:make create_nomedatabela**
+ao rodar o comando acima, note que ele criar√° um arquivo dentro de onde vc pr√©-determinou 
 * feito isso, deve-se rodar o comando: **npx knex migrate:latest**
-e ent„o a tabela ser· criada
+e ent√£o a tabela ser√° criada
